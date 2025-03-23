@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name ORANGE 05 | Скрипт для Кураторов Форума
 // @namespace https://forum.blackrussia.online
-// @version 1.2.2
-// @author Server ORANGE
-// @updateversion Создан 15 февраля
+// @version 1.3
+// @author by M.Freeze
+// @updateversion Создан 22 марта 
 // @match https://forum.blackrussia.online/threads/*
 // @include https://forum.blackrussia.online/threads/
 // @description none
