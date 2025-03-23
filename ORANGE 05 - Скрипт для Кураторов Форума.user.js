@@ -525,6 +525,20 @@ const buttons = [
 	  prefix: FAIL_PREFIX,
 	  status: false,
 	},
+	{
+		  title: 'Лидер семьи',
+      dpstyle: 'border-radius: 13px; margin-right: 5px; border: 2px solid; border-color: rgb(255, 0, 0, 0.5); font-family: UtromPressKachat',
+	  content:
+		'[SIZE=5][FONT=verdana][CENTER][COLOR=rgb(255, 165, 0)]Доброго времени суток, уважаемый (-ая)[/COLOR] {{ user.mention }}.[/CENTER]<br>' +
+          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
+		"[CENTER]На ваших доказательствах отсутствует показ лидера. Создайте новую жалобу, загрузив доказательства с лидером семьи на любой другой хостинг.<br>" +
+          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
+		"[CENTER][COLOR=rgb(255, 0, 0)][ICODE]Отказано, закрыто[/ICODE][/COLOR][/CENTER][/FONT] <br>"+
+		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
+		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+	  prefix: FAIL_PREFIX,
+	  status: false,
+	},
     {
     	  title: 'Долг отказ',
       dpstyle: 'border-radius: 13px; margin-right: 5px; border: 2px solid; border-color: rgb(255, 0, 0, 0.5); font-family: UtromPressKachat',
