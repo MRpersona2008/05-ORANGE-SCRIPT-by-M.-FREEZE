@@ -263,8 +263,8 @@ const buttons = [
          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
         "[CENTER]При составлении жалобы, Вы ошиблись сервером.[/CENTER]<br>" +
 		"[CENTER]Переношу вашу жалобу в нужны раздел.[/CENTER]<br>" +
-         "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
-		  		"[CENTER]Ожидайте ответа от администрации.[/CENTER]<br>" +
+		  
+	 "[CENTER]Ожидайте ответа от администрации.[/CENTER]<br>" +
          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
