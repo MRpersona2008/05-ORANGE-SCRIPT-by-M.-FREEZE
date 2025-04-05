@@ -566,7 +566,7 @@ const buttons = [
 		"[CENTER][COLOR=rgb(53, 255, 18)][ICODE]Одобрено, закрыто[/ICODE][/COLOR][/CENTER][/FONT] <br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
-	  prefix: FAIL_PREFIX,
+	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
 {
