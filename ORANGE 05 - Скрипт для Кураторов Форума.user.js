@@ -1,16 +1,16 @@
 // ==UserScript==
-// @name ORANGE 05 | Скрипт для Кураторов Форума
+// @name ORANGE 05 | Скрипт для ГС/ЗГС 
 // @namespace https://forum.blackrussia.online
-// @version 1.4
-// @author by M.Freeze
-// @updateversion Создан 22 марта 
+// @version 1.0
+// @author Morti_Freeze 
+// @updateversion Создан 11 апреля
 // @match https://forum.blackrussia.online/threads/*
 // @include https://forum.blackrussia.online/threads/
 // @description none
 // @license MIT
 // @icon https://forum.blackrussia.online/account/avatar
-// @downloadURL https://github.com/MRpersona2008/05-ORANGE-SCRIPT-by-M.-FREEZE/blob/e3661acfa815cf0edf1151e32728930de74dfbd5/ORANGE%2005%20-%20%D0%A1%D0%BA%D1%80%D0%B8%D0%BF%D1%82%20%D0%B4%D0%BB%D1%8F%20%D0%9A%D1%83%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BE%D0%B2%20%D0%A4%D0%BE%D1%80%D1%83%D0%BC%D0%B0.user.js
-// @updateURL https://github.com/MRpersona2008/05-ORANGE-SCRIPT-by-M.-FREEZE/blob/e3661acfa815cf0edf1151e32728930de74dfbd5/ORANGE%2005%20-%20%D0%A1%D0%BA%D1%80%D0%B8%D0%BF%D1%82%20%D0%B4%D0%BB%D1%8F%20%D0%9A%D1%83%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BE%D0%B2%20%D0%A4%D0%BE%D1%80%D1%83%D0%BC%D0%B0.user.js
+// @downloadURL 
+// @updateURL 
 // ==/UserScript==
 
 (function () {
@@ -29,79 +29,17 @@ const buttons = [
     title: '--------------------------------------------------- Передача тем на рассмотрение ------------------------------------------------------',
     dpstyle: 'oswald: 3px;     color: #000; background: #FF8C00; box-shadow: 0 0 2px 0 rgba(0,0,0,0.14),0 2px 2px 0 rgba(0,0,0,0.12),0 1px 3px 0 rgba(0,0,0,0.2); border: none; border-color: #FF0000',
      },
-     {
-	  title: 'Приветствие',
-      dpstyle: 'border-radius: 13px; margin-right: 5px; border: 2px solid; border-color: rgb(255, 0, 0, 0.5); font-family: UtromPressKachat',
-	  content:
-		'[SIZE=5][FONT=verdana][CENTER][COLOR=rgb(255, 165, 0)]Доброго времени суток, уважаемый (-ая)[/COLOR] {{ user.mention }}.[/CENTER]'
-	},
-     {
-	  title: 'Специальному Администратору',
-      dpstyle: 'border-radius: 13px; margin-right: 5px; border: 2px solid; border-color: rgb(255, 0, 0, 0.5); font-family: UtromPressKachat',
-	  content:
-		'[SIZE=5][FONT=verdana][CENTER][COLOR=rgb(255, 165, 0)]Доброго времени суток, уважаемый (-ая)[/COLOR] {{ user.mention }}.[/CENTER]<br>' +
-         "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
-        "[CENTER]Ваша жалоба передана на рассмотрение[COLOR=rgb(255, 0, 0)]Специальному Администратору.[/CENTER][/COLOR]<br>" +
-        "[CENTER]Убедительная просьба не создавать копий данной темы.[/CENTER]<br>" +
-         "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
-        "[CENTER][COLOR=rgb(255, 255, 0)][ICODE]Специальной Администрации[/ICODE][/COLOR][/CENTER]<br><br>"+
-		'[CENTER]Ожидайте ответа.[/CENTER]',
-	  prefix: SA_PREFIX,
-	  status: true,
-	},
     {
-	  title: 'Главному Администратору',
+	  title: 'Главному Следящего за ГОСС',
       dpstyle: 'border-radius: 13px; margin-right: 5px; border: 2px solid; border-color: rgb(255, 0, 0, 0.5); font-family: UtromPressKachat',
 	  content:
 		'[SIZE=5][FONT=verdana][CENTER][COLOR=rgb(255, 165, 0)]Доброго времени суток, уважаемый (-ая)[/COLOR] {{ user.mention }}.[/CENTER]<br>' +
          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
-        "[CENTER]Ваша жалоба передана на рассмотрение [COLOR=rgb(255, 0, 0)]Главному Администратору.[/CENTER][/COLOR]<br>" +
+        "[CENTER]Ваша жалоба передана на рассмотрение [COLOR=rgb(255, 0, 0)]Главному Следящему по направлению ГОСС.[/CENTER][/COLOR]<br>" +
         "[CENTER]Убедительная просьба не создавать копий данной темы.[/CENTER]<br>" +
          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
-         "[CENTER][COLOR=rgb(255, 0, 0)][ICODE]Главному Администратору[/ICODE][/COLOR][/CENTER]<br><br>"+
+         "[CENTER][COLOR=rgb(255, 0, 0)][ICODE]Главному Следящего по направлению ГОСС[/ICODE][/COLOR][/CENTER]<br><br>"+
 		'[CENTER]Ожидайте ответа.[/CENTER]',
-	  prefix: GA_PREFIX,
-	  status: true,
-	},
-{
-	  title: 'ЗГА',
-      dpstyle: 'border-radius: 13px; margin-right: 5px; border: 2px solid; border-color: rgb(255, 0, 0, 0.5); font-family: UtromPressKachat',
-	  content:
-		'[SIZE=5][FONT=verdana][CENTER][COLOR=rgb(255, 165, 0)]Доброго времени суток, уважаемый (-ая)[/COLOR] {{ user.mention }}.[/CENTER]<br>' +
-         "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
-        "[CENTER]Ваша жалоба передана на рассмотрение [COLOR=rgb(255, 0, 0)]Заместителю Главного Администратора.[/CENTER][/COLOR]<br>" +
-        "[CENTER]Убедительная просьба не создавать копий данной темы.[/CENTER]<br>" +
-         "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
-        "[CENTER][COLOR=rgb(255, 0, 0)][ICODE]Заместителю Главного Администратора[/ICODE][/COLOR][/CENTER]<br><br>"+
-		'[CENTER]Ожидайте ответа.[/CENTER]',
-	  prefix: WAIT_PREFIX,
-	  status: true,
-	},
-    {
-	  title: 'Техническому специалисту',
-      dpstyle: 'border-radius: 13px; margin-right: 5px; border: 2px solid; border-color: rgb(255, 0, 0, 0.5); font-family: UtromPressKachat',
-	  content:
-		'[SIZE=5][FONT=verdana][CENTER][COLOR=rgb(255, 165, 0)]Доброго времени суток, уважаемый (-ая)[/COLOR] {{ user.mention }}.[/CENTER]<br>' +
-        "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
-        "[CENTER]Ваша жалоба передана на рассмотрение [COLOR=rgb(0, 0, 255)]Техническому Специалисту.[/CENTER][/COLOR]<br>" +
-        "[CENTER]Убедительная просьба не создавать копий данной темы.[/CENTER]<br>" +
-         "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
-        "[CENTER][COLOR=rgb(0, 0, 255)][ICODE]Техническому Специалисту[/ICODE][/COLOR][/CENTER]<br><br>"+
-		'[CENTER]Ожидайте ответа.[/CENTER]',
-	  prefix: TECH_PREFIX,
-	  status: true,
-	},
-     {
-	  title: 'ГКФ|ЗГКФ',
-      dpstyle: 'border-radius: 13px; margin-right: 5px; border: 2px solid; border-color: rgb(255, 0, 0, 0.5); font-family: UtromPressKachat',
-	  content:
-		'[SIZE=5][FONT=verdana][CENTER][COLOR=rgb(255, 165, 0)]Доброго времени суток, уважаемый (-ая)[/COLOR] {{ user.mention }}.[/CENTER]<br>' +
-         "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
-        "[CENTER]Ваша жалоба передана на рассмотрение [COLOR=rgb(0, 0, 255)]Главному/Заместителю Главного Куратора Форума.[/CENTER][/COLOR]<br>" +
-        "[CENTER]Убедительная просьба не создавать копий данной темы.[/CENTER]<br>" +
-         "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
-        "[CENTER][COLOR=rgb(0, 0, 255)][ICODE]ГКФ/ЗГКФ[/ICODE][/COLOR][/CENTER]<br><br>"+
-		'[CENTER]Ожидайте ответа.[/CENTER][/FONT]',
 	  prefix: WAIT_PREFIX,
 	  status: true,
 	},
@@ -119,6 +57,51 @@ const buttons = [
 	  prefix: WAIT_PREFIX,
 	  status: true,
 	},
+	     {
+	  title: 'Одобрено',
+      dpstyle: 'border-radius: 13px; margin-right: 5px; border: 2px solid; border-color: rgb(255, 0, 0, 0.5); font-family: UtromPressKachat',
+	  content:
+		'[SIZE=5][FONT=verdana][CENTER][COLOR=rgb(255, 165, 0)]Доброго времени суток, уважаемый (-ая)[/COLOR] {{ user.mention }}.[/CENTER]<br>' +
+         "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
+        "[CENTER]Ваша жалоба была рассмотрена и [COLOR=rgb(255, 255, 0)]одобрена.[/CENTER][/COLOR]<br>" +
+        "[CENTER]С лидером будет проведена профилактическая беседа. Приносим извинения за предоставленные неудобства [/CENTER]<br>" +
+         "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
+        "[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER]<br><br>"+
+        "[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
+	  prefix: OKAY_PREFIX,
+	  status: false,
+	},
+	     {
+	  title: 'Отказано наказание',
+      dpstyle: 'border-radius: 13px; margin-right: 5px; border: 2px solid; border-color: rgb(255, 0, 0, 0.5); font-family: UtromPressKachat',
+	  content:
+		'[SIZE=5][FONT=verdana][CENTER][COLOR=rgb(255, 165, 0)]Доброго времени суток, уважаемый (-ая)[/COLOR] {{ user.mention }}.[/CENTER]<br>' +
+         "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
+        "[CENTER]Лидер предоставил доказательства. [/CENTER]<br>" +
+        "[CENTER]Наказание выдано верно. [/CENTER]<br>" +
+         "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
+        "[CENTER][COLOR=rgb(255, 0, 0)][ICODE]Отказано[/ICODE][/COLOR][/CENTER]<br><br>"+
+		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
+	  prefix: FALSE_PREFIX,
+	  status: false,
+	},
+		     {
+	  title: 'Отказано ответ жб',
+      dpstyle: 'border-radius: 13px; margin-right: 5px; border: 2px solid; border-color: rgb(255, 0, 0, 0.5); font-family: UtromPressKachat',
+	  content:
+		'[SIZE=5][FONT=verdana][CENTER][COLOR=rgb(255, 165, 0)]Доброго времени суток, уважаемый (-ая)[/COLOR] {{ user.mention }}.[/CENTER]<br>' +
+         "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
+        "[CENTER]Лидер предоставил доказательства. [/CENTER]<br>" +
+        "[CENTER]Ответ на жалобу дан верно. [/CENTER]<br>" +
+         "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
+        "[CENTER][COLOR=rgb(255, 0, 0)][ICODE]Отказано[/ICODE][/COLOR][/CENTER]<br><br>"+
+		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
+	  prefix: FALSE_PREFIX,
+	  status: false,
+	},
 {
     title: '-------------------------------------------------- Перенаправление в другие разделы ------------------------------------------------',
     dpstyle: 'oswald: 3px;     color: #000; background: #FF8C00; box-shadow: 0 0 2px 0 rgba(0,0,0,0.14),0 2px 2px 0 rgba(0,0,0,0.12),0 1px 3px 0 rgba(0,0,0,0.2); border: none; border-color: #8A2BE2',
@@ -133,35 +116,7 @@ const buttons = [
         "[CENTER]Внимательно ознакомившись с вашей жалобой, было решено, что[COLOR=rgb(255, 0, 0)] Вам нужно обраться в [URL=https://forum.blackrussia.online/forums/%D0%96%D0%B0%D0%BB%D0%BE%D0%B1%D1%8B-%D0%BD%D0%B0-%D0%B0%D0%B4%D0%BC%D0%B8%D0%BD%D0%B8%D1%81%D1%82%D1%80%D0%B0%D1%86%D0%B8%D1%8E.3342/]'Раздел жалоб на Администрацию'. [/URL][/COLOR][/CENTER]<br>" +
          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
         "[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
-	  prefix: FAIL_PREFIX,
-	  status: false,
-	},
-     {
-	  title: 'В ЖБ на Тех спец',
-      dpstyle: 'border-radius: 13px; margin-right: 5px; border: 2px solid; border-color: rgb(255, 0, 0, 0.5); font-family: UtromPressKachat',
-	  content:
-		'[SIZE=5][FONT=verdana][CENTER][COLOR=rgb(255, 165, 0)]Доброго времени суток, уважаемый (-ая)[/COLOR] {{ user.mention }}.[/CENTER]<br>' +
-         "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
-        "[CENTER]Ваша жалоба получает статус [COLOR=rgb(255, 0, 0)]Отказано.[/CENTER][/COLOR]<br>" +
-        "[CENTER]Внимательно ознакомившись с вашей жалобой, было решено, что[COLOR=rgb(255, 0, 0)] Вам нужно обраться в [URL=https://forum.blackrussia.online/forums/%D0%96%D0%B0%D0%BB%D0%BE%D0%B1%D1%8B-%D0%BD%D0%B0-%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D1%85-%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D0%B0%D0%BB%D0%B8%D1%81%D1%82%D0%BE%D0%B2.490/]'Раздел жалоб на Технических Специалистов'. [/URL][/COLOR][/CENTER]<br>" +
-         "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
-        "[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
-	  prefix: FAIL_PREFIX,
-	  status: false,
-	},
-     {
-	  title: 'В ЖБ на ЛД',
-      dpstyle: 'border-radius: 13px; margin-right: 5px; border: 2px solid; border-color: rgb(255, 0, 0, 0.5); font-family: UtromPressKachat',
-	  content:
-		'[SIZE=5][FONT=verdana][CENTER][COLOR=rgb(255, 165, 0)]Доброго времени суток, уважаемый (-ая)[/COLOR] {{ user.mention }}.[/CENTER]<br>' +
-         "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
-        "[CENTER]Ваша жалоба получает статус [COLOR=rgb(255, 0, 0)]Отказано.[/CENTER][/COLOR]<br>" +
-        "[CENTER]Внимательно ознакомившись с вашей жалобой, было решено, что[COLOR=rgb(255, 0, 0)] Вам нужно обраться в [URL=https://forum.blackrussia.online/forums/%D0%96%D0%B0%D0%BB%D0%BE%D0%B1%D1%8B-%D0%BD%D0%B0-%D0%BB%D0%B8%D0%B4%D0%B5%D1%80%D0%BE%D0%B2.3343/]'Раздел жалоб на Лидеров'. [/URL][/COLOR][/CENTER]<br>" +
-         "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
-      "[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-	  "[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: FAIL_PREFIX,
 	  status: false,
 	},
@@ -175,7 +130,7 @@ const buttons = [
          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(255, 0, 0)][ICODE]Отказано, закрыто[/ICODE][/COLOR][/CENTER][/FONT] <br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: FAIL_PREFIX,
 	  status: false,
 	},
@@ -184,16 +139,16 @@ const buttons = [
     dpstyle: 'oswald: 3px;     color: #000; background: #FF8C00; box-shadow: 0 0 2px 0 rgba(0,0,0,0.14),0 2px 2px 0 rgba(0,0,0,0.12),0 1px 3px 0 rgba(0,0,0,0.2); border: none; border-color: #8A2BE2',
 	},
 {
-	  title: 'Нарушения не обнаружено',
+	  title: 'Нарушения не найдены',
       dpstyle: 'border-radius: 13px; margin-right: 5px; border: 2px solid; border-color: rgb(255, 0, 0, 0.5); font-family: UtromPressKachat',
 	  content:
 		'[SIZE=5][FONT=verdana][CENTER][COLOR=rgb(255, 165, 0)]Доброго времени суток, уважаемый (-ая)[/COLOR] {{ user.mention }}.[/CENTER]<br>' +
          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
-		"[CENTER]Нарушения со стороны лидера небыли обнаружены<br>" +
+		"[CENTER]Нарушения лидера небыли обнаружены<br>" +
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(255, 0, 0)][ICODE]Отказано, закрыто[/ICODE][/COLOR][/CENTER][/FONT] <br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: FAIL_PREFIX,
 	  status: false,
 	},
@@ -208,7 +163,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(255, 0, 0)][ICODE]Отказано, закрыто[/ICODE][/COLOR][/CENTER][/FONT] <br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: FAIL_PREFIX,
 	  status: false,
 	},
@@ -223,23 +178,10 @@ const buttons = [
          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(255, 0, 0)][ICODE]Отказано, закрыто[/ICODE][/COLOR][/CENTER][/FONT] <br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: FAIL_PREFIX,
 	  status: false,
 	},
-{
-      title: 'Условия',
-      dpstyle: 'border-radius: 13px; margin-right: 5px; border: 2px solid; border-color: rgb(255, 0, 0, 0.5); font-family: UtromPressKachat',
-      content:
-         '[SIZE=5][FONT=verdana][CENTER][COLOR=rgb(255, 165, 0)]Доброго времени суток, уважаемый (-ая)[/COLOR] {{ user.mention }}.[/CENTER]' +
-         "[CENTER][url=https://postimages.org/][img]https://i.postimg.cc/t441J37y/8-F693790-9-CE5-49-A7-8-CA5-EA907-AA35690.gif[/img][/url]"+
-         "[CENTER][COLOR=rgb(255, 0, 0)]Отсутствуют условия сделки или они расписаны не корректно.[/COLOR][/CENTER]" +
-         "[CENTER][url=https://postimages.org/][img]https://i.postimg.cc/t441J37y/8-F693790-9-CE5-49-A7-8-CA5-EA907-AA35690.gif[/img][/url]"+
-         "[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		 "[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
-      prefix: FAIL_PREFIX,
-      status: false,
-},
     {
 	  title: 'Жалоба не по форме',
       dpstyle: 'border-radius: 13px; margin-right: 5px; border: 2px solid; border-color: rgb(255, 0, 0, 0.5); font-family: UtromPressKachat',
@@ -248,23 +190,10 @@ const buttons = [
          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
         "[CENTER]Ваша жалоба составлена не по форме.<br>" +
 		"[CENTER]Заполните данную форму и подайте новую заявку:<br>" +
-        "[QUOTE][SIZE=5]1. Ваш Nick_Name:<br>2. Nick_Name игрока:<br>3. Суть жалобы:<br>4. Доказательство:[/QUOTE][/CENTER]<br>" +
+        "[QUOTE][SIZE=5]1. Ваш Nick_Name:<br>2. Nick_Name лидера:<br>3. Суть жалобы:<br>4. Доказательство:[/QUOTE][/CENTER]<br>" +
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
-	  prefix: FAIL_PREFIX,
-	  status: false,
-	},
-    {
-	  title: 'Не тот сервер',
-      dpstyle: 'border-radius: 13px; margin-right: 5px; border: 2px solid; border-color: rgb(255, 0, 0, 0.5); font-family: UtromPressKachat',
-	  content:
-		'[SIZE=5][FONT=verdana][CENTER][COLOR=rgb(255, 165, 0)]Доброго времени суток, уважаемый (-ая)[/COLOR] {{ user.mention }}.[/CENTER]<br>' +
-         "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
-        "[CENTER]При составлении жалобы, Вы ошиблись сервером.[/CENTER]<br>"
-         "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
-		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: FAIL_PREFIX,
 	  status: false,
 	},
@@ -278,7 +207,7 @@ const buttons = [
          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(255, 0, 0)][ICODE]Отказано, закрыто[/ICODE][/COLOR][/CENTER][/FONT] <br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: FAIL_PREFIX,
 	  status: false,
 	},
@@ -292,7 +221,7 @@ const buttons = [
          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(255, 0, 0)][ICODE]Отказано, закрыто[/ICODE][/COLOR][/CENTER][/FONT] <br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: FAIL_PREFIX,
 	  status: false,
 	},
@@ -306,21 +235,7 @@ const buttons = [
 		"[CENTER][COLOR=rgb(255, 0, 0)][ICODE]Отказано, закрыто[/ICODE][/COLOR][/CENTER][/FONT] <br>"+
          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
-	  prefix: FAIL_PREFIX,
-	  status: false,
-	},
-    {
-	  title: 'Жалоба от 3-го лица',
-      dpstyle: 'border-radius: 13px; margin-right: 5px; border: 2px solid; border-color: rgb(255, 0, 0, 0.5); font-family: UtromPressKachat',
-	  content:
-		'[SIZE=5][FONT=verdana][CENTER][COLOR=rgb(255, 165, 0)]Доброго времени суток, уважаемый (-ая)[/COLOR] {{ user.mention }}.[/CENTER]<br>' +
-         "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
-        "[CENTER]Ваша жалоба составлена от третьего лица.[/CENTER]<br>" +
-         "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
-		"[CENTER][COLOR=rgb(255, 0, 0)][ICODE]Отказано, закрыто[/ICODE][/COLOR][/CENTER][/FONT] <br>"+
-		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: FAIL_PREFIX,
 	  status: false,
 	},
@@ -334,7 +249,7 @@ const buttons = [
          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(255, 0, 0)][ICODE]Отказано, закрыто[/ICODE][/COLOR][/CENTER][/FONT] <br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: FAIL_PREFIX,
 	  status: false,
 	},
@@ -348,35 +263,8 @@ const buttons = [
          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(255, 0, 0)][ICODE]Отказано, закрыто[/ICODE][/COLOR][/CENTER][/FONT] <br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: FAIL_PREFIX,
-	  status: false,
-	},
-{
-	  title: 'Обмен ИВ на BC',
-      dpstyle: 'border-radius: 13px; margin-right: 5px; border: 2px solid; border-color: rgb(255, 0, 0, 0.5); font-family: UtromPressKachat',
-	  content:
-		'[SIZE=5][FONT=verdana][CENTER][COLOR=rgb(255, 165, 0)]Доброго времени суток, уважаемый (-ая)[/COLOR] {{ user.mention }}.[/CENTER]<br>' +
-          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
-		"[CENTER]Обменивать [COLOR=rgb(255, 0, 0)]Игровую Валюту[/COLOR] на [COLOR=rgb(255, 0, 0)]Донат Валюту[/COLOR] запрещено. [COLOR=rgb(255, 0, 0)]В последующих случаях[/COLOR] это будет приравниваться к пункту правил [COLOR=rgb(255, 0, 0)]2.28.[/COLOR]<br>" +
-          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
-		"[CENTER][COLOR=rgb(255, 0, 0)]Закрыто.[/COLOR][/CENTER][/FONT]" +
-		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
-	  prefix: FAIL_PREFIX,
-	  status: false,
-	},
-        {
-	  title: 'Игрок в бане',
-      dpstyle: 'border-radius: 13px; margin-right: 5px; border: 2px solid; border-color: rgb(255, 0, 0, 0.5); font-family: UtromPressKachat',
-	  content:
-		'[SIZE=5][FONT=verdana][CENTER][COLOR=rgb(255, 165, 0)]Доброго времени суток, уважаемый (-ая)[/COLOR] {{ user.mention }}.[/CENTER]<br>' +
-         "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
-        "[CENTER]Нарушитель уже наказан.[/CENTER]<br>" +
-         "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
-		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
-	  prefix: CLOSE_PREFIX,
 	  status: false,
 	},
      {
@@ -389,11 +277,11 @@ const buttons = [
 	  content:
 		'[SIZE=5][FONT=verdana][CENTER][COLOR=rgb(255, 165, 0)]Доброго времени суток, уважаемый (-ая)[/COLOR] {{ user.mention }}.[/CENTER]<br>' +
          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
-        "[CENTER]В данном случае требуеться Видеодоказательство на нарушение от игрока.[/CENTER]<br>" +
+        "[CENTER]В данном случае требуеться Видеодоказательство на нарушение от лидера.[/CENTER]<br>" +
 		"[CENTER]Создайте новую тему и прикрепите доказательства в виде видео, загруженные на хостинги (Rutube, Япикс, imgur).[/CENTER]<br>" +
          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: FAIL_PREFIX,
 	  status: false,
 	},
@@ -408,7 +296,7 @@ const buttons = [
          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(255, 0, 0)][ICODE]Отказано, закрыто[/ICODE][/COLOR][/CENTER][/FONT] <br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: FAIL_PREFIX,
 	  status: false,
      },
@@ -422,7 +310,7 @@ const buttons = [
          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(255, 0, 0)][ICODE]Отказано, закрыто[/ICODE][/COLOR][/CENTER][/FONT] <br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: FAIL_PREFIX,
 	  status: false,
  },
@@ -436,7 +324,7 @@ const buttons = [
          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(255, 0, 0)][ICODE]Отказано, закрыто[/ICODE][/COLOR][/CENTER][/FONT] <br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: FAIL_PREFIX,
 	  status: false,
  },
@@ -446,11 +334,11 @@ const buttons = [
 	  content:
 		'[SIZE=5][FONT=verdana][CENTER][COLOR=rgb(255, 165, 0)]Доброго времени суток, уважаемый (-ая)[/COLOR] {{ user.mention }}.[/CENTER]<br>' +
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
-		"[CENTER]В вашей жалобе недостаточно доказательств на нарушение игрока.<br>" +
+		"[CENTER]В вашей жалобе недостаточно доказательств на нарушение лидера.<br>" +
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(255, 0, 0)][ICODE]Отказано, закрыто[/ICODE][/COLOR][/CENTER][/FONT] <br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: FAIL_PREFIX,
 	  status: false,
 	},
@@ -464,7 +352,7 @@ const buttons = [
          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(255, 0, 0)][ICODE]Отказано, закрыто[/ICODE][/COLOR][/CENTER][/FONT] <br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: FAIL_PREFIX,
 	  status: false,
 	},
@@ -478,7 +366,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(255, 0, 0)][ICODE]Отказано, закрыто[/ICODE][/COLOR][/CENTER][/FONT] <br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: FAIL_PREFIX,
 	  status: false,
 	},
@@ -488,11 +376,11 @@ const buttons = [
 	  content:
 		'[SIZE=5][FONT=verdana][CENTER][COLOR=rgb(255, 165, 0)]Доброго времени суток, уважаемый (-ая)[/COLOR] {{ user.mention }}.[/CENTER]<br>' +
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
-		"[CENTER]В вашей жалобе не загружены доказательства на нарушение игрока. Создайте новую жалобу, загрузив доказательства с нарушениями игрока.<br>" +
+		"[CENTER]В вашей жалобе не загружены доказательства на нарушение лидера. Создайте новую жалобу, загрузив доказательства с нарушениями лидера.<br>" +
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(255, 0, 0)][ICODE]Отказано, закрыто[/ICODE][/COLOR][/CENTER][/FONT] <br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: FAIL_PREFIX,
 	  status: false,
 	},
@@ -502,71 +390,12 @@ const buttons = [
 	  content:
 		'[SIZE=5][FONT=verdana][CENTER][COLOR=rgb(255, 165, 0)]Доброго времени суток, уважаемый (-ая)[/COLOR] {{ user.mention }}.[/CENTER]<br>' +
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
-		"[CENTER]В вашей жалобе доказательства приватны. Создайте новую жалобу, загрузив доказательства с нарушениями игрока на любой другой хостинг.<br>" +
+		"[CENTER]В вашей жалобе доказательства приватны. Создайте новую жалобу, загрузив доказательства с нарушениями лидера на любой другой хостинг.<br>" +
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(255, 0, 0)][ICODE]Отказано, закрыто[/ICODE][/COLOR][/CENTER][/FONT] <br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: FAIL_PREFIX,
-	  status: false,
-	},
-	     {
-	  title: 'Длинные доказательства',
-      dpstyle: 'border-radius: 13px; margin-right: 5px; border: 2px solid; border-color: rgb(255, 0, 0, 0.5); font-family: UtromPressKachat',
-	  content:
-		'[SIZE=5][FONT=verdana][CENTER][COLOR=rgb(255, 165, 0)]Доброго времени суток, уважаемый (-ая)[/COLOR] {{ user.mention }}.[/CENTER]<br>' +
-         "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
-        "[CENTER]Нам необходимо загрузить ваш доказательства на солеующие платформы: (YouTube, RuTube). [/CENTER]<br>" +
-		"[CENTER]Так как хостинг lmgur не пропускает длинные видео. [/CENTER]<br>" +
-         "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
-		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
-	  prefix: FAIL_PREFIX,
-	  status: false,
-	},
-	{
-		  title: 'Лидер семьи',
-      dpstyle: 'border-radius: 13px; margin-right: 5px; border: 2px solid; border-color: rgb(255, 0, 0, 0.5); font-family: UtromPressKachat',
-	  content:
-		'[SIZE=5][FONT=verdana][CENTER][COLOR=rgb(255, 165, 0)]Доброго времени суток, уважаемый (-ая)[/COLOR] {{ user.mention }}.[/CENTER]<br>' +
-          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
-		"[CENTER]На ваших доказательствах отсутствует показ лидера. Создайте новую жалобу, загрузив доказательства с лидером семьи на любой другой хостинг.<br>" +
-          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
-		"[CENTER][COLOR=rgb(255, 0, 0)][ICODE]Отказано, закрыто[/ICODE][/COLOR][/CENTER][/FONT] <br>"+
-		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
-	  prefix: FAIL_PREFIX,
-	  status: false,
-	},
-    {
-    	  title: 'Долг отказ',
-      dpstyle: 'border-radius: 13px; margin-right: 5px; border: 2px solid; border-color: rgb(255, 0, 0, 0.5); font-family: UtromPressKachat',
-	  content:
-		'[SIZE=5][FONT=verdana][CENTER][COLOR=rgb(255, 165, 0)]Доброго времени суток, уважаемый (-ая)[/COLOR] {{ user.mention }}.[/CENTER]<br>' +
-          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
-		"[CENTER]Исходя из общих правил проекта, нарушений от игрока нет. Подобные долги никак не наказуемые со стороны администрации. Долги, которые были выданы через трейд, полностью ваша ответственность. По правилам, выдача в долг должна быть начислена через банковский счет и на возврат долга дается 30 календарных дней.[QUOTE][SIZE=5]2.57. Запрещается брать в долг игровые ценности и не возвращать их. | [COLOR=rgb(255, 0, 0)][COLOR=rgb(255, 0, 0)] Ban 30 дней / permban [/QUOTE][/COLOR][/CENTER]<br>" +
-"[CENTER] Примечание:[COLOR=rgb(255, 255, 255)] займ может быть осуществлен только через зачисление игровых ценностей на банковский счет, максимальный срок займа 30 календарных дней, если займ не был возвращен, аккаунт должника блокируется; [/COLOR][/CENTER]<br>" +
-"[CENTER] Примечание: [COLOR=rgb(255, 255, 255)]при невозврате игровых ценностей общей стоимостью менее 5 миллионов включительно аккаунт будет заблокирован на 30 дней, если более 5 миллионов, аккаунт будет заблокирован навсегда;[/COLOR][/CENTER]<br>" +
-"[CENTER] Примечание: [COLOR=rgb(255, 255, 255)]жалоба на игрока, который занял игровые ценности и не вернул в срок, подлежит рассмотрению только при наличии подтверждения суммы и условий займа в игровом процессе, меры в отношении должника могут быть приняты только при наличии жалобы и доказательств. Жалоба на должника подается в течение 10 дней после истечения срока займа. Договоры вне игры не будут считаться доказательствами.[/COLOR][/CENTER]<br>" +
-          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
-		"[CENTER][COLOR=rgb(255, 0, 0)][ICODE]Отказано, закрыто[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
-	  prefix: FAIL_PREFIX,
-	  status: false,
-	},
-     {
-	  title: 'Одобрено лидер',
-      dpstyle: 'border-radius: 13px; margin-right: 5px; border: 2px solid; border-color: rgb(255, 0, 0, 0.5); font-family: UtromPressKachat',
-	  content:
-		'[SIZE=5][FONT=verdana][CENTER][COLOR=rgb(255, 165, 0)]Доброго времени суток, уважаемый (-ая)[/COLOR] {{ user.mention }}.[/CENTER]<br>' +
-         "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
-		"[CENTER]С лидером будет проведена профилактическая беседа.<br>" +
-          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
-		"[CENTER][COLOR=rgb(53, 255, 18)][ICODE]Одобрено, закрыто[/ICODE][/COLOR][/CENTER][/FONT] <br>"+
-		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
-	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
 {
@@ -583,7 +412,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -597,7 +426,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -611,7 +440,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -621,11 +450,11 @@ const buttons = [
 	  content:
 		'[SIZE=5][FONT=verdana][CENTER][COLOR=rgb(255, 165, 0)]Доброго времени суток, уважаемый (-ая)[/COLOR] {{ user.mention }}.[/CENTER]<br>' +
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
-		"[CENTER]Нарушитель будет наказан по пункту правил:[QUOTE][SIZE=5]3.05. Запрещен флуд — 3 и более повторяющихся сообщений от одного и того же игрока | [COLOR=rgb(255, 0, 0)]Mute 30 минут. [/QUOTE][/COLOR][/CENTER]<br>" +
+		"[CENTER]Нарушитель будет наказан по пункту правил:[QUOTE][SIZE=5]3.05. Запрещен флуд — 3 и более повторяющихся сообщений от одного и того же лидера | [COLOR=rgb(255, 0, 0)]Mute 30 минут. [/QUOTE][/COLOR][/CENTER]<br>" +
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -639,7 +468,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -653,7 +482,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -667,7 +496,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -681,7 +510,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -695,7 +524,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -709,7 +538,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -723,7 +552,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -737,7 +566,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -751,7 +580,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -768,7 +597,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -782,7 +611,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -796,7 +625,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -811,11 +640,11 @@ const buttons = [
 		'[SIZE=5][FONT=verdana][CENTER][COLOR=rgb(255, 165, 0)]Доброго времени суток, уважаемый (-ая)[/COLOR] {{ user.mention }}.[/CENTER]<br>' +
          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
         "[CENTER]Ваша жалоба получает статус [COLOR=rgb(0, 255, 0)]Одобрено.[/CENTER][/COLOR]<br>" +
-        "[CENTER]Нарушитель будет наказан по пункту правил:[QUOTE][SIZE=5]2.22. Запрещено хранить / использовать / распространять стороннее программное обеспечение или любые другие средства, позволяющие получить преимущество над другими игроками | [COLOR=rgb(255, 0, 0)]Ban 15 - 30 дней / PermBan.[/QUOTE][/COLOR][/CENTER]<br>" +
+        "[CENTER]Нарушитель будет наказан по пункту правил:[QUOTE][SIZE=5]2.22. Запрещено хранить / использовать / распространять стороннее программное обеспечение или любые другие средства, позволяющие получить преимущество над другими лидерами | [COLOR=rgb(255, 0, 0)]Ban 15 - 30 дней / PermBan.[/QUOTE][/COLOR][/CENTER]<br>" +
         "[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -829,7 +658,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -843,7 +672,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -857,7 +686,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -871,7 +700,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -885,7 +714,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -899,7 +728,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -913,7 +742,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -927,7 +756,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -941,7 +770,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -955,7 +784,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 	"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -969,7 +798,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -983,7 +812,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -993,11 +822,11 @@ const buttons = [
 	  content:
 		'[SIZE=5][FONT=verdana][CENTER][COLOR=rgb(255, 165, 0)]Доброго времени суток, уважаемый (-ая)[/COLOR] {{ user.mention }}.[/CENTER]<br>' +
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
-		"[CENTER]Нарушитель будет наказан по пункту правил:[QUOTE][SIZE=5]2.16. Запрещен SK (Spawn Kill) — убийство или нанесение урона на титульной территории любой фракции / организации, на месте появления игрока, а также на выходе из закрытых интерьеров и около них | [COLOR=rgb(255, 0, 0)]Jail 60 минут / Warn (за два и более убийства).[/QUOTE][/CENTER]<br>" +
+		"[CENTER]Нарушитель будет наказан по пункту правил:[QUOTE][SIZE=5]2.16. Запрещен SK (Spawn Kill) — убийство или нанесение урона на титульной территории любой фракции / организации, на месте появления лидера, а также на выходе из закрытых интерьеров и около них | [COLOR=rgb(255, 0, 0)]Jail 60 минут / Warn (за два и более убийства).[/QUOTE][/CENTER]<br>" +
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -1011,7 +840,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -1025,7 +854,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -1035,11 +864,11 @@ const buttons = [
 	  content:
 		'[SIZE=5][FONT=verdana][CENTER][COLOR=rgb(255, 165, 0)]Доброго времени суток, уважаемый (-ая)[/COLOR] {{ user.mention }}.[/CENTER]<br>' +
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
-		"[CENTER]Нарушитель будет наказан по пункту правил:[QUOTE][SIZE=5]2.20. Запрещен Mass DM (Mass DeathMatch) — убийство или нанесение урона без веской IC причины трем игрокам и более | [COLOR=rgb(255, 0, 0)]Warn / Ban 3 - 7 дней.[/QUOTE][/CENTER]<br>" +
+		"[CENTER]Нарушитель будет наказан по пункту правил:[QUOTE][SIZE=5]2.20. Запрещен Mass DM (Mass DeathMatch) — убийство или нанесение урона без веской IC причины трем лидерам и более | [COLOR=rgb(255, 0, 0)]Warn / Ban 3 - 7 дней.[/QUOTE][/CENTER]<br>" +
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  status: false,
 	},
 {
@@ -1048,11 +877,11 @@ const buttons = [
 	  content:
 		'[SIZE=5][FONT=verdana][CENTER][COLOR=rgb(255, 165, 0)]Доброго времени суток, уважаемый (-ая)[/COLOR] {{ user.mention }}.[/CENTER]<br>' +
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
-		"[CENTER]Нарушитель будет наказан по пункту правил:[QUOTE][SIZE=5]2.23. Запрещено скрывать от администрации баги системы, а также распространять их игрокам | [COLOR=rgb(255, 0, 0)]Ban 15 - 30 дней / PermBan.[/QUOTE][/CENTER]<br>" +
+		"[CENTER]Нарушитель будет наказан по пункту правил:[QUOTE][SIZE=5]2.23. Запрещено скрывать от администрации баги системы, а также распространять их лидерам | [COLOR=rgb(255, 0, 0)]Ban 15 - 30 дней / PermBan.[/QUOTE][/CENTER]<br>" +
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -1066,7 +895,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -1080,7 +909,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -1094,7 +923,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  status: false,
 	},
 {
@@ -1107,7 +936,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -1121,7 +950,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -1135,7 +964,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -1149,7 +978,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -1163,7 +992,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -1177,7 +1006,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -1188,14 +1017,14 @@ const buttons = [
 		'[SIZE=5][FONT=verdana][CENTER][COLOR=rgb(255, 165, 0)]Доброго времени суток, уважаемый (-ая)[/COLOR] {{ user.mention }}.[/CENTER]<br>' +
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER]Нарушитель будет наказан по пункту правил:[QUOTE][SIZE=5]2.39. Злоупотребление нарушениями правил сервера | [COLOR=rgb(255, 0, 0)]Ban 7 - 15 дней.[/QUOTE][/COLOR][/CENTER]<br>" +
-  "[CENTER][COLOR=rgb(255, 0, 0)]Примечание:[/COLOR] неоднократное (от шести и более) нарушение правил серверов, которые были совершены за прошедшие 7 дней, с момента проверки истории наказаний игрока.[/CENTER]<br>" +
+  "[CENTER][COLOR=rgb(255, 0, 0)]Примечание:[/COLOR] неоднократное (от шести и более) нарушение правил серверов, которые были совершены за прошедшие 7 дней, с момента проверки истории наказаний лидера.[/CENTER]<br>" +
   "[CENTER][COLOR=rgb(255, 0, 0)]Примечание:[/COLOR] наказания выданные за нарушения правил текстовых чатов, помеху (kick) не учитываются.[/CENTER]<br>" +
   "[CENTER][COLOR=rgb(255, 0, 0)]Исключение:[/COLOR] пункты правил: 2.54, 3.04 учитываются в качестве злоупотребления нарушениями правил серверов.[/CENTER]<br>" +
   "[CENTER][COLOR=rgb(255, 0, 0)]Пример:[/COLOR] было получено пять наказаний за DM, шестое будет злоупотреблением. Если было получено одно наказание за упоминание родных, два наказания за DB и два наказания за DM, следующее будет считаться злоупотреблением.[/CENTER]<br>" +
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -1209,7 +1038,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -1223,7 +1052,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -1237,7 +1066,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 		"[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -1251,7 +1080,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 "[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 	  prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -1265,7 +1094,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 "[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 		prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -1279,7 +1108,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 "[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 		prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -1293,7 +1122,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 "[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 		prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -1307,7 +1136,7 @@ const buttons = [
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 "[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 		prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -1325,7 +1154,7 @@ const buttons = [
          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 "[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 		prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -1339,7 +1168,7 @@ const buttons = [
          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(255, 0, 0)][ICODE]Отказано, закрыто[/ICODE][/COLOR][/CENTER][/FONT] <br>"+
 "[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 		prefix: FAIL_PREFIX,
 	  status: false,
 	},
@@ -1353,7 +1182,7 @@ const buttons = [
          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(255, 0, 0)][ICODE]Отказано, закрыто[/ICODE][/COLOR][/CENTER][/FONT] <br>"+
 "[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 		prefix: FAIL_PREFIX,
 	  status: false,
 	},
@@ -1367,7 +1196,7 @@ const buttons = [
          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(255, 0, 0)][ICODE]Отказано, закрыто[/ICODE][/COLOR][/CENTER][/FONT] <br>"+
 "[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 		prefix: FAIL_PREFIX,
 	  status: false,
 	},
@@ -1381,7 +1210,7 @@ const buttons = [
          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(255, 0, 0)][ICODE]Отказано, закрыто[/ICODE][/COLOR][/CENTER][/FONT] <br>"+
 "[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 		prefix: FAIL_PREFIX,
 	  status: false,
 	},
@@ -1395,7 +1224,7 @@ const buttons = [
          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(255, 0, 0)][ICODE]Отказано, закрыто[/ICODE][/COLOR][/CENTER][/FONT] <br>"+
 "[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 		prefix: FAIL_PREFIX,
 	  status: false,
 	},
@@ -1409,7 +1238,7 @@ const buttons = [
          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(255, 0, 0)][ICODE]Отказано, закрыто[/ICODE][/COLOR][/CENTER][/FONT] <br>"+
 "[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 		prefix: FAIL_PREFIX,
 	  status: false,
 	},
@@ -1423,7 +1252,7 @@ const buttons = [
          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(255, 0, 0)][ICODE]Отказано, закрыто[/ICODE][/COLOR][/CENTER][/FONT] <br>"+
 "[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 		prefix: FAIL_PREFIX,
 	  status: false,
 	},
@@ -1437,7 +1266,7 @@ const buttons = [
          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(255, 0, 0)][ICODE]Отказано, закрыто[/ICODE][/COLOR][/CENTER][/FONT] <br>"+
 "[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 		prefix: FAIL_PREFIX,
 	  status: false,
 	},
@@ -1451,7 +1280,7 @@ const buttons = [
          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(255, 0, 0)][ICODE]Отказано, закрыто[/ICODE][/COLOR][/CENTER][/FONT] <br>"+
 "[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 		prefix: FAIL_PREFIX,
 	  status: false,
 	},
@@ -1465,7 +1294,7 @@ const buttons = [
          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(255, 0, 0)][ICODE]Отказано, закрыто[/ICODE][/COLOR][/CENTER][/FONT] <br>"+
 "[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 		prefix: FAIL_PREFIX,
 	  status: false,
 	},
@@ -1479,7 +1308,7 @@ const buttons = [
          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(255, 0, 0)][ICODE]Отказано, закрыто[/ICODE][/COLOR][/CENTER][/FONT] <br>"+
 "[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 		prefix: FAIL_PREFIX,
 	  status: false,
 	},
@@ -1493,7 +1322,7 @@ const buttons = [
          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(255, 0, 0)][ICODE]Отказано, закрыто[/ICODE][/COLOR][/CENTER][/FONT] <br>"+
 "[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 		prefix: FAIL_PREFIX,
 	  status: false,
 	},
@@ -1507,7 +1336,7 @@ const buttons = [
 		"[CENTER]Создайте новую Биографию по форме.<br>" +
           "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 "[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 		prefix: FAIL_PREFIX,
 	  status: false,
 	},
@@ -1525,7 +1354,7 @@ const buttons = [
          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 "[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 		prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -1539,7 +1368,7 @@ const buttons = [
          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(255, 0, 0)][ICODE]Отказано, закрыто[/ICODE][/COLOR][/CENTER][/FONT] <br>"+
 "[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 		prefix: FAIL_PREFIX,
 	  status: false,
 	},
@@ -1557,7 +1386,7 @@ const buttons = [
          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(0, 255, 0)][ICODE]Одобрено[/ICODE][/COLOR][/CENTER][/FONT]<br>"+
 "[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 		prefix: OKAY_PREFIX,
 	  status: false,
 	},
@@ -1571,7 +1400,7 @@ const buttons = [
          "[CENTER][URL='https://postimages.org/'][IMG]https://i.postimg.cc/9MkyXPZQ/Picsart-24-05-10-13-21-41-387-1.png[/IMG][/URL]<br>"+
 		"[CENTER][COLOR=rgb(255, 0, 0)][ICODE]Отказано, закрыто[/ICODE][/COLOR][/CENTER][/FONT] <br>"+
 "[FONT=verdana][CENTER]Приятной игры на сервере [COLOR=rgb(255, 165, 0)]Orange(05).[/COLOR][/CENTER][/FONT]<br>"+
-		"[FONT=verdana][CENTER]С уважением администратор сервера - Morti_Freeze! [/CENTER][/FONT][/SIZE]<br>",
+		"[FONT=verdana][CENTER]С уважением ЗГС ГОСС - Morti_Freeze!  [/CENTER][/FONT][/SIZE]<br>",
 		prefix: FAIL_PREFIX,
 	  status: false,
 	},
